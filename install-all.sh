@@ -13,7 +13,4 @@ sudo apt -y dist-upgrade
 . ./install-helm.sh
 . ./install-kubectl.sh
 . ./install-k3d.sh
-
-
-
-
+. ./install-code.sh
