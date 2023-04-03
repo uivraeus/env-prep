@@ -8,11 +8,11 @@ set -uo pipefail
 sudo apt update
 sudo apt -y dist-upgrade
 
-./install-docker.sh
-./install-podman.sh
-./install-helm.sh
-./install-kubectl.sh
-./install-k3d.sh
+exec ./install-docker.sh
+exec ./install-podman.sh
+exec ./install-helm.sh
+exec ./install-kubectl.sh
+exec ./install-k3d.sh
 
 
 
