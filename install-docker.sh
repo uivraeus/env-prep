@@ -7,7 +7,7 @@ set -uxo pipefail
 # Install Docker [https://docs.docker.com/engine/install/ubuntu/]
 sudo apt remove docker docker-engine docker.io containerd runc
 sudo apt update
-sudo apt install ca-certificates curl gnupg
+sudo apt install -y ca-certificates curl gnupg
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 sudo rm -f /etc/apt/keyrings/docker.gpg
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
