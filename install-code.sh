@@ -2,6 +2,10 @@
 
 # This scripts assumes Ubuntu-22.04 (with systemd)
 
+echo "***************************************************"
+echo "Installing VS Code"
+echo "***************************************************"
+
 set -uxo pipefail
 
 # Install VS code [https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/]
