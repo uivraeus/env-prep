@@ -2,6 +2,10 @@
 
 # This scripts assumes Ubuntu-22.04 (with systemd)
 
+echo "***************************************************"
+echo "Installing Docker"
+echo "***************************************************"
+
 set -uxo pipefail
 
 # Install Docker [https://docs.docker.com/engine/install/ubuntu/]

@@ -2,6 +2,10 @@
 
 # This scripts assumes Ubuntu-22.04 (with systemd)
 
+echo "***************************************************"
+echo "Installing Helm"
+echo "***************************************************"
+
 set -uxo pipefail
 
 # Install Helm [https://helm.sh/docs/intro/install/#from-script]

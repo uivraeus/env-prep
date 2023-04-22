@@ -2,6 +2,10 @@
 
 # This scripts assumes Ubuntu-22.04 (with systemd)
 
+echo "***************************************************"
+echo "Installing k3d"
+echo "***************************************************"
+
 set -uxo pipefail
 
 # Install k3d [https://k3d.io/v5.4.9/#installation]
