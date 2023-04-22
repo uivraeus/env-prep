@@ -17,5 +17,6 @@ bash ./install-k3d.sh
 if [ -z "$WSL_DISTRO_NAME" ]; then 
   bash ./install-code.sh 
 else
+  echo
   echo "WSL detected, skipping install of VS Code";
 fi
