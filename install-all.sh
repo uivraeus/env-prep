@@ -14,8 +14,8 @@ bash ./install-podman.sh
 bash ./install-helm.sh
 bash ./install-kubectl.sh
 bash ./install-k3d.sh
-if [ -z "$WSL_DISTRO_NAME" ]; then 
-  bash ./install-code.sh 
+if [[ -z ${WSL_DISTRO_NAME-} ]]; then
+  bash ./install-code.sh
 else
   echo
   echo "WSL detected, skipping install of VS Code";
