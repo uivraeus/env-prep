@@ -16,3 +16,18 @@ rm packages.microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt update
 sudo apt install -y code
+
+# Extension for DevContainers
+# https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+code --install-extension ms-vscode-remote.remote-containers
+
+# Also for Docker and Kubernetes
+# https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+# https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+
+# Customize some settings to non-default values
+SETTINGS_DIR=${HOME}/.config/Code/User
+[ -d "$SETTINGS_DIR" ] || mkdir -p $SETTINGS_DIR
+cp ./vscode-settings.json $SETTINGS_DIR/settings.json
