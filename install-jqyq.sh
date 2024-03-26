@@ -9,8 +9,9 @@ echo "***************************************************"
 set -uxo pipefail
 
 # Install yq [https://github.com/mikefarah/yq#wget]
-sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
-sudo chmod +x /usr/local/bin/yq
+mkdir -p ${HOME}/.local/bin
+wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O ${HOME}/.local/bin/yq
+chmod +x ${HOME}/.local/bin/yq
 
 # Install jq
 sudo apt -y update
