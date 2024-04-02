@@ -8,6 +8,12 @@ echo "***************************************************"
 
 set -uxo pipefail
 
+if command -v code &> /dev/null
+then
+    echo "code already installed, skipping"
+    exit 0
+fi
+
 # Install VS code [https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/]
 sudo apt install -y software-properties-common apt-transport-https wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor > packages.microsoft.gpg

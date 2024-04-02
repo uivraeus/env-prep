@@ -8,13 +8,14 @@ echo "***************************************************"
 
 set -uxo pipefail
 
+if command -v k3d &> /dev/null
+then
+    echo "k3d already installed, skipping"
+    exit 0
+fi
+
 # Install k3d [https://k3d.io/v5.4.9/#installation]
 curl -s -o install_k3d.sh https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh
 chmod +x install_k3d.sh
 sudo ./install_k3d.sh
 rm install_k3d.sh
-
-
-
-
-

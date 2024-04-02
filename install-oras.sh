@@ -6,6 +6,12 @@ echo "***************************************************"
 
 set -uxo pipefail
 
+if command -v oras &> /dev/null
+then
+    echo "oras already installed, skipping"
+    exit 0
+fi
+
 # Install yq [https://oras.land/docs/installation/#linux]
 VERSION="1.1.0"
 curl -L -o /tmp/oras.tar.gz "https://github.com/oras-project/oras/releases/download/v${VERSION}/oras_${VERSION}_linux_amd64.tar.gz"

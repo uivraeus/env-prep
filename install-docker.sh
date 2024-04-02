@@ -8,6 +8,12 @@ echo "***************************************************"
 
 set -uxo pipefail
 
+if command -v docker &> /dev/null
+then
+    echo "docker already installed, skipping"
+    exit 0
+fi
+
 # Install Docker [https://docs.docker.com/engine/install/ubuntu/]
 sudo apt remove docker docker-engine docker.io containerd runc
 sudo apt update
