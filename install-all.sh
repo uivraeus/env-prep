@@ -10,7 +10,7 @@ sudo apt -y dist-upgrade
 
 bash ./install-jqyq.sh
 bash ./install-docker.sh
-bash ./install-podman.sh
+bash ./install-oras.sh
 bash ./install-helm.sh
 bash ./install-kubectl.sh
 bash ./install-k3d.sh
